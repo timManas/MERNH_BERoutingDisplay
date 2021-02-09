@@ -5,32 +5,32 @@ import axios from 'axios'
 
 const HomeScreen = () => {
   // Make Axios Call to fetch Product
-  //   const products = [
-  //     {
-  //       name: 'Airpods Wireless Bluetooth Headphones',
-  //       image: '/images/airpods.jpg',
-  //       description:
-  //         'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
-  //       brand: 'Apple',
-  //       category: 'Electronics',
-  //       price: 89.99,
-  //       countInStock: 10,
-  //       rating: 4.5,
-  //       numReviews: 12,
-  //     },
-  //   ]
+  const products = [
+    {
+      name: 'Airpods Wireless Bluetooth Headphones',
+      image: '/images/airpods.jpg',
+      description:
+        'Bluetooth technology lets you connect it with compatible devices wirelessly High-quality AAC audio offers immersive listening experience Built-in microphone allows you to take calls while working',
+      brand: 'Apple',
+      category: 'Electronics',
+      price: 89.99,
+      countInStock: 10,
+      rating: 4.5,
+      numReviews: 12,
+    },
+  ]
 
-  const [products, setProducts] = useState([])
+  //   const [products, setProducts] = useState([])
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      const { data } = await axios.get('/api/products')
-      console.log('Data: ' + data)
-      setProducts(data)
-    }
+  //   useEffect(() => {
+  //     const fetchProducts = async () => {
+  //       const { data } = await axios.get('/api/products')
+  //       console.log('Data: ' + data)
+  //       setProducts(data)
+  //     }
 
-    fetchProducts()
-  }, [])
+  //     fetchProducts()
+  //   }, [])
 
   return (
     <>
