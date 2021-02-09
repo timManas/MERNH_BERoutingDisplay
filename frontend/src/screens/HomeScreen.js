@@ -30,6 +30,7 @@ const HomeScreen = () => {
     }
 
     fetchProducts()
+    console.log('products: ' + products)
   }, [])
 
   return (
