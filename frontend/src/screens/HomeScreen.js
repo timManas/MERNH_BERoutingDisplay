@@ -30,13 +30,14 @@ const HomeScreen = () => {
     }
 
     fetchProducts()
-    console.log('products: ' + products)
+    console.log('UsEffect products: ' + products)
   }, [])
 
   return (
     <>
       <h1>Latest Products</h1>
       <Row>
+        {console.log('products: ' + products)}
         {products.map((product) => (
           <Col key={product._id} sm={12} md={6} lg={4} xl={3}>
             <Product product={product} />
