@@ -78,7 +78,7 @@ const Product = mongoose.model('Product', productSchema)
 // @route   GET /api/products
 // @access  Public
 export const getProducts = async (req, res) => {
-  const products = await Product.find()
+  const products = await Product.find({})
   res.json(products)
 }
 
