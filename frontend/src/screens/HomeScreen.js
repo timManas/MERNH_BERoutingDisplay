@@ -25,12 +25,12 @@ const HomeScreen = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       const { data } = await axios.get('/api/products')
-
-      setProducts(data)
+      console.log('UsEffect products: ' + data)
+      const { products } = data
+      setProducts(products)
     }
 
     fetchProducts()
-    console.log('UsEffect products: ' + products)
   }, [])
 
   return (

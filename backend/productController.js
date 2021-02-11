@@ -79,7 +79,7 @@ const Product = mongoose.model('Product', productSchema)
 // @access  Public
 export const getProducts = async (req, res) => {
   const products = await Product.find({})
-  res.json(products)
+  res.json({ products })
 }
 
 // @desc    Fetch Single products
